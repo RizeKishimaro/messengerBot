@@ -22,10 +22,9 @@ export class AppController {
   }
   @Post("webhook")
   checkPageSubscription(@Body() body: any){
-  console.dir(body.entry[0].messaging);
    if(body.object === "page"){
       body.entry.forEach(element => {
-        
+        console.log(element) 
       });
     }
     return "OK"
